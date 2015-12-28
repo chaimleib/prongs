@@ -6,7 +6,9 @@ Gem::Specification.new do |s|
   s.description = "Currently contains utilities for formatting ActiveSupport durations, and a clamp method for numbers."
   s.authors     = ["Chaim-Leib Halbert"]
   s.email       = "chaim.leib.halbert@gmail.com"
-  s.files       = Dir.glob["lib/**/*.rb"]
+  s.files       = Dir.glob("lib/**/*.rb")
   s.homepage    = "https://github.com/chaimleib/prongs"
   s.license     = "MIT"
+
+  s.add_dependency "activesupport", "~> 4.0"
 end
