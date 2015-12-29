@@ -1,11 +1,11 @@
 module Prongs
   module Utils
-    module Time
+    module Duration
       require 'active_support/all'
 
       UTC = TZInfo::Timezone.get("UTC")
 
-      def self.duration_colon(d)
+      def self.hms_format(d)
         total_seconds = (d / 1.second).to_f.round
         seconds = total_seconds % 60
         minutes = (total_seconds/60) % 60
@@ -25,7 +25,7 @@ module Prongs
         total_seconds = (d / (24*3600).second).to_f.floor
       end
 
-      def self.duration_string(d)
+      def self.human_dh_format(d)
         d = d/1.second
         dur_days = duration_days_floor(d)
         dur_hours = duration_hours(d - dur_days.days)
